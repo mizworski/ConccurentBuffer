@@ -74,7 +74,6 @@ int main() {
             case -1:
                 syserr("fork");
             case 0:
-                sleep(NAP_TIME);
                 if (i < LICZBA_PRODUCENTOW) {
                     for (int j = 0; j < LICZBA_PRODUKTOW / LICZBA_PRODUCENTOW; ++j) {
                         producent(mut, sprod, skons, produkty, ile_w_buforze);

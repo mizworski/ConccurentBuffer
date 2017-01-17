@@ -15,7 +15,7 @@ endmacro()
 
 add_library(err err.c)
 
-add_executable(unnamed_memory_protected unnamed_memory_protected.c)
-target_link_libraries(unnamed_memory_protected rt pthread)
+add_executable(bufor bufor.c)
+target_link_libraries(bufor rt pthread)
 
 install(TARGETS DESTINATION .)
