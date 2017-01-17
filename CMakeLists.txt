@@ -13,24 +13,9 @@ macro (add_executable _name)
     endif()
 endmacro()
 
-add_library(err err.c bufor.c)
-
-add_executable(get_memory get_memory.c)
-target_link_libraries(get_memory rt)
-
-add_executable(send_message send_message.c)
-target_link_libraries(send_message rt)
-
-add_executable(unnamed_memory unnamed_memory.c)
-target_link_libraries(unnamed_memory rt)
-
-add_executable(send_message_protected send_message_protected.c)
-target_link_libraries(send_message_protected rt pthread)
+add_library(err err.c)
 
 add_executable(unnamed_memory_protected unnamed_memory_protected.c)
 target_link_libraries(unnamed_memory_protected rt pthread)
-
-add_executable(bufor bufor.c)
-target_link_libraries(bufor rt pthread)
 
 install(TARGETS DESTINATION .)
